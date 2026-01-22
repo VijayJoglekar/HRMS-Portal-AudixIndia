@@ -1,46 +1,48 @@
 # HRMS Portal - AudixIndia Technical Assessment
 
-A full-stack MERN application developed for the AudixIndia.in Intern evaluation. This system provides a Basic Human Resource Management System with secure, role-based access for Admins and Employees.
+[cite_start]A full-stack Human Resource Management System built with the MERN (MongoDB, Express, React, Node) stack[cite: 8, 11, 12]. [cite_start]This application was developed for the MERN Stack Intern evaluation at AudixIndia.in, focusing on secure role-based access control and organizational management[cite: 3, 15, 16].
+
+## 📺 Project Preview & Demo
+Watch the full project walkthrough and live demo here: 
+**[MERN HRMS Demo - Vijay Joglekar](https://youtu.be/M6IDRD2BvZE)**
+
+---
 
 ## 🚀 Features
-* [cite_start]**Role-Based Access Control:** Separate dashboards and permissions for Admins and Employees[cite: 16, 25].
-* [cite_start]**Admin Module:** Complete Employee CRUD (Add, Edit, View, Deactivate) [cite: 31-36].
-* [cite_start]**Attendance Tracking:** Mark daily attendance with duplicate prevention [cite: 46-54].
-* [cite_start]**Leave Management:** Employee leave application with Admin approval/rejection workflow [cite: 55-66].
-* [cite_start]**Dashboard Stats (Bonus):** Real-time visualization of total staff and today's attendance [cite: 85-87].
+* [cite_start]**Role-Based Access Control (RBAC):** Distinct dashboards and permissions for **Admin** and **Employee** roles[cite: 17, 25, 70].
+* [cite_start]**Admin Module:** Complete Employee management lifecycle including Add, Edit, View, and Deactivate (CRUD) [cite: 31-36].
+* [cite_start]**Attendance Management:** Daily attendance marking for employees with backend logic to prevent duplicate entries for the same day[cite: 48, 54].
+* [cite_start]**Leave Workflow:** Employees can apply for leaves while Admins possess the authority to Approve or Reject requests[cite: 57, 62].
+* [cite_start]**Dashboard Stats (Bonus):** Real-time data visualization of Total Staff and Today's Attendance metrics [cite: 85-87].
+
+---
 
 ## 🛠 Tech Stack
-* [cite_start]**Frontend:** React.js, Lucide-React[cite: 11].
-* [cite_start]**Backend:** Node.js, Express.js[cite: 11].
-* [cite_start]**Database:** MongoDB Atlas[cite: 12].
-* [cite_start]**Security:** JWT-based authentication and password encryption[cite: 13, 24, 28].
+* [cite_start]**Frontend:** React.js, Lucide-React (Icons), CSS3[cite: 11, 68].
+* [cite_start]**Backend:** Node.js, Express.js (RESTful Architecture)[cite: 11, 75].
+* [cite_start]**Database:** MongoDB Atlas (Logical schema design)[cite: 12, 79].
+* [cite_start]**Authentication:** JWT (JSON Web Token) with password encryption[cite: 13, 24, 28].
+
+---
 
 ## [cite_start]📋 API Endpoints [cite: 95]
-### Auth
-- `POST /api/auth/login`: User authentication and JWT generation.
+### Authentication
+- [cite_start]`POST /api/auth/login`: User authentication and JWT generation[cite: 23, 24].
 
-### Admin Only
-- `GET /api/employees`: Fetch all employee records.
-- `POST /api/employees`: Create new employee profile.
-- `PUT /api/employees/:id`: Update employee details.
-- `PUT /api/employees/:id/deactivate`: Set status to Inactive.
+### Employee Management (Admin Only)
+- [cite_start]`GET /api/employees`: Fetch all employee records[cite: 36].
+- [cite_start]`POST /api/employees`: Create a new employee profile[cite: 33].
+- [cite_start]`PUT /api/employees/:id`: Update specific employee details[cite: 34].
+- [cite_start]`PUT /api/employees/:id/deactivate`: Update employee status to 'Inactive'[cite: 35, 45].
 
 ### Attendance & Leaves
-- `POST /api/attendance`: Mark daily status.
-- `GET /api/leaves`: View pending requests.
-- `PUT /api/leaves/:id`: Approve/Reject leave.
+- [cite_start]`POST /api/attendance`: Mark daily attendance status[cite: 48].
+- [cite_start]`GET /api/leaves`: View pending leave requests (Admin)[cite: 61].
+- [cite_start]`PUT /api/leaves/:id`: Approve or Reject specific leave requests (Admin)[cite: 62].
+
+---
 
 ## [cite_start]⚙️ Setup Instructions [cite: 94]
-1. **Clone Repo:** `git clone <your-repo-link>`
-2. **Backend:** - `cd hrmsbackend`
-   - `npm install`
-   - Create `.env` with `PORT`, `MONGO_URI`, and `JWT_SECRET`.
-   - `npm start`
-3. **Frontend:**
-   - `cd hrmsfrontend`
-   - `npm install`
-   - `npm run dev`
-
-## [cite_start]🔐 Role-Based Access Explanation [cite: 96]
-- **Admin:** Can manage all employee data, view organization-wide attendance, and process leave requests.
-- **Employee:** Can only mark their own attendance, view their own history, and apply for leaves.
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/VijayJoglekar/HRMS-Portal-AudixIndia.git](https://github.com/VijayJoglekar/HRMS-Portal-AudixIndia.git)
