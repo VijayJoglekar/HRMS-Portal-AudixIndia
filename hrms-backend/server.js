@@ -16,7 +16,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", 
-      "https://hrms-frontend-audix.onrender.com" 
+      "https://hrms-frontend-audix.onrender.com",
+      "https://hrms-portal-audixindia-1.onrender.com" 
     ],
     credentials: true,
   })
