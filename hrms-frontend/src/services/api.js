@@ -1,7 +1,10 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", 
+  // This automatically switches between live and local URLs
+  baseURL: import.meta.env.PROD 
+    ? "https://hrms-portal-audixindia.onrender.com/api" 
+    : "http://localhost:5000/api",
 });
 
 
